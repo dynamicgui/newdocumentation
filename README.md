@@ -5,6 +5,7 @@ Documentation for [DynamicGui](https://github.com/ClubObsidian/DynamicGui)
 ## License
 
 The documentation is licensed under [CC0](LICENSE)
+
 Docsy is licensed under the [Apache License](DOCSY-LICENSE)
 
 ## Running
