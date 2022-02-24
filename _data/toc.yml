@@ -5,11 +5,15 @@
       url: "docs/getting-started"
       children:
         - title: Features
-          url: "docs/getting-started#getting-started"
-        - title: Development
-          url: "docs/getting-started#development"
-        - title: Customization
-          url: "docs/getting-started#customization"
+          url: "docs/getting-started#picking-a-configuration-langauge"
+        - title: Concepts
+          url: "docs/getting-started#concepts"
+        - title: Gui
+          url: "docs/getting-started#gui"
+        - title: Slot
+          url: "docs/getting-started#slot"          
+        - title: Function
+          url: "docs/getting-started#function"               
     - title: "About"
       url: "about"
     - title: "News"
