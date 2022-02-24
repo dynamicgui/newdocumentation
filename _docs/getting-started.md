@@ -1,23 +1,18 @@
 ---
 title: Getting Started
 tags: 
- - jekyll
- - github
-description: Getting started with Docsy Jekyll
+description: Getting started with DynamicGui
 ---
 
 # Getting Started
 
-## Features
+## What you need to know
 
-### User Interaction
+### Picking a configuration langauge
 
 
-On the right side of any page, you'll notice links to edit the page, or
-open an issue. This ensures that any time you have a question or want to 
-suggest or request a change, you can do so immediately and link directly
-to the section of interest. The sections on the page also have permalinks so
-you can link directly to them.
+DynamicGui supports [yaml](https://learnxinyminutes.com/docs/yaml/), [json](https://learnxinyminutes.com/docs/json/), [hocon](https://github.com/lightbend/config#using-hocon-the-json-superset) and [xml](https://learnxinyminutes.com/docs/xml/)  for gui configuration. 
+To write guis for DynamicGui you will need to know one the listed languages.
 
 ### Search
 
