@@ -14,43 +14,40 @@ description: Getting started with DynamicGui
 DynamicGui supports [yaml](https://learnxinyminutes.com/docs/yaml/), [json](https://learnxinyminutes.com/docs/json/), [hocon](https://github.com/lightbend/config#using-hocon-the-json-superset) and [xml](https://learnxinyminutes.com/docs/xml/)  for gui configuration. 
 To write guis for DynamicGui you will need to know one the listed languages.
 
-### Search
+### Concepts
 
-The entire site, including posts and documentation, is indexed and then available
-for search at the top or side of the page. Give it a try! The content is rendered
-into window data that is used by lunr.js to generate the search results.
-If you want to exclude any file from search, add this to its front end matter:
+DynamicGui is broken down into a few different concepts
 
-```
----
-layout: null
-excluded_in_search: true
----
-```
+* Gui - Top level inventory, holds data about the inventory
+* Slot - Inventories are made up of slots, hold the data for the icon of the slot, the lore etc
+* Functions - Functions can be assigned to either guis or slots and are what perform various actions
 
-The example above is for a javascript file in the assets folder that is used as a template,
-but should not be included in search.
+### Gui
 
-### External Search
+The gui is broken down into a few different basic parts:
+* title - The title of the gui is the text that is displayed at the top of the inventory
+* rows - The number of rows in the inventory, typically a max of 6 rows
+* mode - The mode that the inventory should be built with
+  * set - Set each slot at the given index, I.E: `0` is the first slot
+  * add - Adds each slot to the inventory, this is useful if you run functions on build of the gui
+* type
+* //TODO - add types, locations, npcs, aliases etc maybe this should be added to another section
 
-If you have an external site with a search GET endpoint (meaning one that ends
-in `?q=<term>`, then you can automatically link page tags to search this endpoint.
-For example, on an HPC site I'd want a tag like "mpi" to do a search on 
-[http://ask.cyberinfrastructure.org](http://ask.cyberinfrastructure.org) for mpi.
-See the [tags](#tags) section below for how to configure this.
+### Slot
 
-### Documentation
+Slots are the building blocks of guis, slots hold the items, function that are used for clicking on etc for the gui. 
 
-Documentation pages should be written in the `docs` folder of the repository,
-and you are allowed to use whatever level of nesting (subfolders) that 
-works for you! It's a Jekyll [collection](https://jekyllrb.com/docs/collections/), which means that you
-can add other content (images, scripts) and it will be included for linking to.
-To create subfolders with files, you can simply create new markdon files. For example:
+Basic Slot properties:
+* icon - The type of the icon that is displayed in the inventory - refer to the Javadocs for your specific spigot version
+  * //TODO - Add links to Material Javadocs depending on spigot versions, maybe we should just host these ourselves on Github pages
+* name (Optional) - The name of the item in the inventory
+* data (Optional) - The damage or data value of the item in the inventory, exists for legacy support in versions < 1.13
+* lore (Optional) - The lore of the item in the inventory
+* functions (Optional) - The functions that will be ran from the slot, this will be explored more in the function section
 
- - `_docs/subfolder/example-page.md` renders to `http://localhost:4000/docsy-jekyll/docs/subfolder/example-page/`
- - `_docs/subfolder.md` renders to `http://localhost:4000/docsy-jekyll/docs/subfolder/`
+### Function
 
-And the page you are reading now renders from `_docs/getting-started.md`
+//TODO - Functions
 
 #### Organization
 
