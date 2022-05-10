@@ -2,7 +2,7 @@ version: '3.7'
 services:
   site:
     container_name: docsy
-    command: jekyll serve --incremental --force_polling --livereload
+    command: jekyll serve --force_polling --livereload
     image: jekyll/jekyll:3.8
     volumes: 
       - "./:/srv/jekyll"
